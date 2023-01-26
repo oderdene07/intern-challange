@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./home.css" />
+    <title>Facebook Login with Firebase</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <div class="logo">
+          <p class="logo-text">Logo</p>
+        </div>
+        <div id="user-info">Welcome,</div>
+      </div>
+      <a href="./carousel.html">
+        <button class="search-button">Search</button>
+      </a>
+    </header>
+    <div class="container">
+      <div class="photo-container"></div>
+      <button class="generate-button">Generate</button>
+    </div>
+
+    <script>
+      let userName = localStorage.getItem("userName");
+      document.getElementById("user-info").innerHTML = `Welcome, ${userName}`;
+    </script>
+  </body>
+</html>
