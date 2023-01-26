@@ -25,6 +25,9 @@
 
     <script>
       let userName = localStorage.getItem("userName");
+      if (!userName) {
+        window.location.href = "./auth.html";
+      }
       document.getElementById("user-info").innerHTML = `Welcome, ${userName}`;
     </script>
   </body>
